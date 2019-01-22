@@ -57,8 +57,7 @@
 |52|[귀여운 그녀석을 찾아서☆](https://l4disk.github.io/refresh_room/detail/52/)|완료|
 |53|[두 사람의 욕심쟁이 플랜](https://l4disk.github.io/refresh_room/detail/53/)|완료|
 |54|[マキノ・レポート 幸運パワーの正体とは？](https://l4disk.github.io/refresh_room/detail/54/)|미번역|
-|55|[猫チャンガールはお魚ガールの夢を見ない？](https://l4disk.github.io/refresh_room/detail/55/)|미번역|
-|82|[뭐라 해도 여고생♪](https://l4disk.github.io/refresh_room/detail/82/)|완료|
 |55|[야옹이 소녀는 물고기 소녀의 꿈을 꾸지 않는다?](https://l4disk.github.io/refresh_room/detail/55/)|완료|
 |68|[귀엽게, 귀여움회의♪](https://l4disk.github.io/refresh_room/detail/68/)|완료|
 |76|[가련한 천사들의 대화 ~리틀 엔젤스-](https://l4disk.github.io/refresh_room/detail/76/)|완료|
+|82|[뭐라 해도 여고생♪](https://l4disk.github.io/refresh_room/detail/82/)|완료|
