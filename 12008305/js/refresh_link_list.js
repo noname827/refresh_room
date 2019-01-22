@@ -223,7 +223,11 @@ refApp.controller('refCtrl', ['$scope', '$filter', function($scope, $filter) {
 		id: 55,
 		name: ["猫チャンガールは", "お魚ガールの夢を見ない？"],
 		idol: "前川みく_浅利七海_마에카와미쿠_아사리나나미"
-	}*/];
+	}*/, {
+		id: 82,
+		name: ["뭐라 해도 여고생♪"],
+		idol: "北条加蓮_大槻唯_長富蓮実_호죠카렌_오오츠키유이_나가토미하스미"
+	}];
 	$scope.q = '';
 
 	$scope.getData = function() {

@@ -1,0 +1,1307 @@
+<!doctype html>
+<html lang="ko" xml:lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobage: footer-color" content="none">
+    <link rel="stylesheet" href='../../12008305/css/game/pex.css' media="all">
+    <script src='../../12008305/js/jquery-2.2.2.min.js'></script>
+    <script src='../../12008305/js/ilibrary.js'></script>
+    <script src='../../12008305/js/pex-petit-1.2.0.js'></script>
+    <script src='../../12008305/js/pex_common.js'></script>
+    <script src='../../12008305/js/min/petit_manager.min.js'></script>
+    <script src='../../12008305/js/min/refresh_room.min.js'></script>
+    <title>아이돌마스터 신데렐라 걸즈</title>
+    <link rel="stylesheet" type="text/css" href="../../12008305/css/rich/refresh_room.css" media="all">
+    <script type='text/javascript' src='../../12008305/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css?20171116" />
+</head>
+
+<body>
+	<article>
+		<section id="pageContainer" class="m-Btm0">
+			<div id="bg_space" class="large-size"></div>
+			<div id="jsEyeCatch">
+				<div style="margin-top:120px"><img src='../../12008305/image_sp/petit_cg/ui/sprite/loading/working_1.gif' width="195" height="139"></div>
+				<div style="margin-top:-80px"><img src='../../12008305/image_sp/petit_cg/ui/sprite/loading/loading.gif' width="102" height="102"></div>
+			</div>
+			<div class="effect-container large-size">
+				<div id="animation-container"></div>
+				<div id="dialogue" class="animation"></div>
+				<div class="story" style="text-align:left;">
+					<div class="comment-container">
+						<span></span><br>
+						<span></span><br>
+						<span></span><br>
+					</div>
+					<a href="#" class="story_btn" style="display:none;"></a>
+				</div>
+			</div>
+			<div id="name-plate" rel="3" class="large-size">
+				<div class="plate-area" rel="1">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/101.png'>
+				</div>
+				<div class="plate-area" rel="2">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/134.png'>
+				</div>
+				<div class="plate-area" rel="3">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/17.png'>
+				</div>
+			</div>
+			<a id="next" class="next large-size" href="#"></a>
+		</section>
+	</article>
+	<script type="text/javascript">
+		(function() {
+			var refreshRoom = window.refreshRoom || {};
+			var ua = navigator.userAgent;
+			var in_chome = false;
+			try {
+				in_chrome = (chrome in window);
+			} catch (e) {
+				in_chrome = false;
+			}
+			refreshRoom.is_pc = in_chrome || (window.chrome ? true : false) && (window.chrome.webstore) || ua.indexOf('ChromeApp') > -1 || ua.indexOf('AAWebview') > -1;
+			refreshRoom.old_os = ua.match(/(OS [3-7]|Android [2-4])/);
+			refreshRoom.is_multiply = false;
+			refreshRoom.returnUrl = '../../';
+			refreshRoom.dialogueSwf = '../../petit_refresh_room_balloon_swf';
+			refreshRoom.data = {
+				"id": "82",
+				"refresh_room_id": "82",
+				"start_time": "2019/01/21 15:00:00",
+				"refresh_room_name": "뭐라 해도 여고생♪",
+				"idol_set_id_1": "142",
+				"idol_accessory_set_id_1": "7",
+				"idol_set_id_2": "7",
+				"idol_accessory_set_id_2": "50",
+				"idol_set_id_3": "149",
+				"idol_accessory_set_id_3": "7",
+				"idol_set_id_4": "",
+				"idol_accessory_set_id_4": "",
+				"idol_set_id_5": "",
+				"idol_accessory_set_id_5": "",
+				"idol_name_1": "北条加蓮",
+				"idol_kana_1": "호죠 카렌",
+				"name_plate_id_1": "101",
+				"idol_name_2": "大槻唯",
+				"idol_kana_2": "오오츠키 유이",
+				"name_plate_id_2": "134",
+				"idol_name_3": "長富蓮実",
+				"idol_kana_3": "나가토미 하스미",
+				"name_plate_id_3": "17",
+				"idol_name_4": "",
+				"idol_kana_4": "",
+				"idol_name_5": "",
+				"idol_kana_5": "",
+				"idol_avatar": {
+					"1": {
+						"attribute": "2",
+						"body_type": "1",
+						"breast_size": "2",
+						"short_name": "카렌",
+						"image_url_list": {
+							"expression_1024": "../../12008305/js/petit_cg/expression/1024.js",
+							"hair_10024": "../../12008305/js/petit_cg/hair/10024.js",
+							"costume_1_20024": "../../12008305/js/petit_cg/costume/1/20024.js"
+						},
+						"sub_type_list": {
+							"head": null,
+							"hand": null,
+							"leg": null
+						},
+						"take_sub_type": {
+							"head": 0,
+							"hand": 0,
+							"leg": 0
+						}
+					},
+					"2": {
+						"attribute": "3",
+						"body_type": "1",
+						"breast_size": "1",
+						"short_name": "유이",
+						"image_url_list": {
+							"expression_1007": "../../12008305/js/petit_cg/expression/1009.js",
+							"hair_10007": "../../12008305/js/petit_cg/hair/10009.js",
+							"costume_1_20007": "../../12008305/js/petit_cg/costume/1/20009.js",
+							"hand_1_43123": "../../12008305/js/petit_cg/hand/1/43123.js"
+						},
+						"sub_type_list": {
+							"head": null,
+							"hand": null,
+							"leg": null
+						},
+						"take_sub_type": {
+							"head": 0,
+							"hand": 0,
+							"leg": 0
+						}
+					},
+					"3": {
+						"attribute": "1",
+						"body_type": "1",
+						"breast_size": "2",
+						"short_name": "하스미",
+						"image_url_list": {
+							"expression_1120": "../../12008305/js/petit_cg/expression/1120.js",
+							"hair_10120": "../../12008305/js/petit_cg/hair/10120.js",
+							"costume_1_20120": "../../12008305/js/petit_cg/costume/1/20120.js"
+						},
+						"sub_type_list": {
+							"head": null,
+							"hand": null,
+							"leg": null
+						},
+						"take_sub_type": {
+							"head": 0,
+							"hand": 0,
+							"leg": 0
+						}
+					}
+				}
+			};
+			var default_swf = '../../petit_refresh_room_character_swf';
+			for(var i in refreshRoom.data.idol_avatar) {
+				refreshRoom.data.idol_avatar[i].swf = default_swf;
+			}
+			refreshRoom.detail = [{
+				"id": "1",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "shock",
+				"motion2": "",
+				"motion3": "out",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "1",
+				"message": "엑 진짜!? \n거길 갔다왔다고?",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "2",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "smug",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "헤헤~ 굉장했다구♪\n소문대로 가게 안 전부\nＴＨＥ・귀여움☆이란 느낌이었어!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "3",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "angry",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "좋겠다 좋겠다~. 우리 반 애들도 \n학교 끝나고 갔다온 모양이라 말야. \n나도 가보고 싶다~.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "4",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "in_walk",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "어머 안녕하세요. \n카렌 양, 유이 양♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "5",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "shout",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "오, 하스밍! 안녕-!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "6",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "smile_right",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "야호. 하스미 안녕.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "7",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "nod_smile",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "즐거워보이는 소리가 들렸는데요…\n저도 실례해도 될까요?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "8",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "joy",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "당연하지! 있지 하스밍♪\n사실 말야…………짠!!\n봐봐, 이 사탕♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "9",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "smile_left",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "어머나…! 무척이나 귀여운\n사탕이네요♪\n봄나라로 날아갈 것만 같은….",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "10",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "nod",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "봄나라라～…응응. 그럴 거 같아!\n이거 있지, 요즘 화제가 되고 있는 \n저기 디저트샵 거야.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "11",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "question_right",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "하스밍도 알아?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "12",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "notice",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "혹시 저쪽 골목 근처에 생긴 \n가게인가요? 맛있고 귀엽고\n컬러풀한 디저트가 호평이랬던가.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "13",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "light_joy",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "맞아 맞아. 여러가지 있지만 \n특히 이건 예쁘구나 싶어서.\n푸른 하늘같은 스카이블루♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "14",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "shy",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "네, 정말이네요♪\n아기새의 노래가 들리는 것 같아요.\n다른 건 뭐가 있나요?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "15",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "smile_right",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "나도 궁금해!\n유이, 뜸들이지 말고 가르쳐 줘.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "16",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "nod_smile",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "캔디도 좋았지만 \n가게에서 추천하는 아이스크림도 먹어봤어♪\n진짜 엄청 귀여웠어!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "17",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "smile_left",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "컬러풀한 토핑이 잔뜩 올라가 있고, \n파스텔톤에 엄청난 양, \n행성 모양 쿠키까지 있어!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "18",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "light_joy",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "들으면 들을수록 재미있겠어요…!\n분명 꿈나라의 과자처럼 \n귀엽겠죠…♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "19",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "smile_right",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "하스밍도 \n이런 거 좋아했었나?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "20",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "nod_smile",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "네♪ 컬러풀하고 귀여운 데에\n자연스레 마음이 이끌려버려요.\n소녀틱 만세예요♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "21",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "nod",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "그리고 그 가게…실은 계속\n궁금했어요. 가게 앞 골목을\n자주 지나다녀서요.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "22",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "amazement",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "진짜!? 잘 찾아냈네~.\n그 근처는 미로라고 불릴 정도인데.\n이미 체크했을 줄은…하스미 대단한걸?",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "23",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "smile_left",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "후훗. 단골 구제의류샵으로 가는 길 \n근처거든요. 언젠가 가봐야겠다고\n생각했는데, 좀처럼…。",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "24",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "trouble",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "아ー, 그렇구나…. 인기있는 가게인데다, \n가볼까 싶어도 일에 공부에 \n형편이 잘 안 맞는단 말이지.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "25",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "nod",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "으음~, 이것도 어떤 의미로는 \n아이돌의 숙명이라는 걸까.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "26",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "notice",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "…아. 그러고 보니 그 가게 근처에 \n멋진 레트로풍 카페도 있어요. \n두 분도 알고 계신가요?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "27",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "smile_right",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "응? 뭐야 뭐야？\n자세히 말해줘ー!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "28",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "light_joy",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "저도 조금 전에 미사키 씨한테 \n들은 건데요. \n크림 소다가 걸작이라나봐요♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "29",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "trouble",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "최근에 유명해지고 있다는 모양이라…\n「가려면 지금뿐이야!」라면서 \n미사키 씨가 강력하게 추천해주셨어요.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "30",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "joy",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "우와~, 뭐야 그거 궁금하잖아. \n미사키 씨가 추천한다는 건 \n맛도 모양도 절대 틀림없다는 거잖아.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "31",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "shout",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "……아, 떠올랐다. \n그럼 말야, 다음 휴일에 다같이 가보자!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "32",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "light_joy",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "어머♪\n좋은 생각이네요! 부디♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "33",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "smile_right",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "나도 찬성. 그렇게 정해졌으면, \n바로 스케줄을 상의해볼까.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "34",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "question_left",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "어차피 갈 거면 \n이 캔디 가게도 가볼까? \n둘 다 분명 맘에 들 거야!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "35",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "nod_smile",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "아, 좋네 좋네♪\n그러고 나서 난 하스미가 추천한 \n옷가게도 가보고 싶은데.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "36",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "smile_left",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "네, 안내해드릴게요♪\n그 대신…카렌 양께서 추천하는\n가게도 알려주시지 않겠어요?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "37",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "smug",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "오케이, 맡겨줘. \n하스미한테 어울릴만한 \n네일샵을 알고 있어.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "38",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "joy",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "오, 욕심쟁이 플랜이 되어버렸다! \n좋아 좋아~♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "39",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "nod",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "그럴 거면 아예…다른 분들한테도, \n추천하는 곳을 여쭤볼까요♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "40",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "smile_right",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "뭐야 그거, 명안이네! \n그러면…미카나 사야는 어때?\n이런 거 빠삭하지 않을까?",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "41",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "nod_smile",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "그리고~…키라링도 잘 알 거 같아! \n아니, 전부 불러서\n다같이 노는 것도 재밌겠네!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "42",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "shy",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "조금씩 추천할 곳을 알려주면서…\n꿈이 넓어지네요♪ 게다가, 여럿이서\n놀면 더 재밌어지겠죠!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "43",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "trouble",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "………………아, 근데 잠깐. \n우리 중요한 걸 잊어버린 거 아닐까?",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "44",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "question_left",
+				"motion3": "question_left",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "중요한 거?",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "45",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "nod",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "이거…우리 변장 필수겠지?",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "46",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "amazement",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "앗, 확실히…. \n거리에서 아이돌이 한꺼번에 있으면 \n다른 분들께 폐를 끼치겠네요.",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "47",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "trouble",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "음ー, 그런 함정이…！\n음음음~~~…………아, 그래. \n그럼 그것도 다른 애한테 물어보자!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "48",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "",
+				"motion3": "smile_left",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "후후훗, 재미있어졌네요. \n그리고, 옛날 아이돌같아서…\n왠지 조금 두근거려요♪",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "",
+				"message_arrow_3": "1",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "49",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "joy",
+				"motion2": "",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "알 거 같아. \n「여닌자」라는 단어가 왠지\n좀 낯간지럽달까.",
+				"message_window_type": "",
+				"message_arrow_1": "1",
+				"message_arrow_2": "",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}, {
+				"id": "50",
+				"refresh_room_id": "82",
+				"idol_disp_1": "",
+				"idol_disp_2": "",
+				"idol_disp_3": "",
+				"idol_disp_4": "",
+				"idol_disp_5": "",
+				"motion1": "",
+				"motion2": "shout",
+				"motion3": "",
+				"motion4": "",
+				"motion5": "",
+				"bg_image": "",
+				"message": "헤헤, 의욕이 충만하구나 다들♪ \n그럼 바로 욕심쟁이 플랜을 향해 \n리서치 개시!",
+				"message_window_type": "",
+				"message_arrow_1": "",
+				"message_arrow_2": "1",
+				"message_arrow_3": "",
+				"message_arrow_4": "",
+				"message_arrow_5": ""
+			}];
+			petitManager.loaded_action = function() {
+				if(refreshRoom.is_multiply) $('.animation').css({
+					zoom: "50%"
+				});
+				var margin = window.innerHeight - parseInt($('#bg_space > img').css('height'));
+				if(margin > 0) $('#pageContainer').css({
+					"margin-top": margin * 0.5
+				});
+				var $effect_container = $('.effect-container');
+				var $dialogue = $('#dialogue');
+				var dialogue_top = parseInt($dialogue.css('top'));
+				var dialogue_ratio = refreshRoom.dialogue.scaleSizeCheck() / 320;
+				$dialogue.css('top', dialogue_top * dialogue_ratio);
+				if(!$effect_container.hasClass('large-size')) {
+					$dialogue.css('top', dialogue_top * dialogue_ratio);
+					var $animation = $('.animation:not(#dialogue)');
+					var anime_top = parseInt($animation.css('top'));
+					$animation.css('top', anime_top * dialogue_ratio);
+				}
+				$('#jsEyeCatch').hide();
+				refreshRoom.dialogue.startSwf();
+			};
+			petitManager.setWidth(refreshRoom.dialogue.scaleSizeCheck(refreshRoom.is_pc));
+			refreshRoom.bg_list = {
+				"1": "../../12008305/image_sp/ui/refresh_room/bg/bg1.jpg",
+				"": "../../12008305/image_sp/ui/refresh_room/bg/bg.jpg"
+			};
+			var image = new Image;
+			var multiply = refreshRoom.is_pc || window.devicePixelRatio >= 1.5 && !refreshRoom.old_os ? 0.5 : 1;
+			var size = refreshRoom.dialogue.scaleSizeCheck() * multiply;
+			var ratio = size / 320;
+			image.width = size;
+			var effect_container = $('.effect-container');
+			effect_container.css({
+				width: size,
+				height: size,
+				bottom: parseInt(effect_container.css('bottom')) * ratio
+			});
+			image.onload = function() {
+				$('#bg_space').append(image);
+				var height = $(this).css('height');
+				$(this).parent().css('height', height);
+				$(image).css('top', parseInt($(image).css('top')) * ratio);
+				$('#name-plate').css({
+					"-webkit-transform": "scale(" + ratio + ")"
+				})
+				petitManager.setCharacters(refreshRoom.data.idol_avatar);
+				refreshRoom.dialogue.setMotion();
+			}
+			image.src = refreshRoom.bg_list[refreshRoom.detail[0].bg_image];
+			//console.log(refreshRoom);
+		})();
+
+		function playText() {
+			if(window.refreshRoom == void 0) return;
+			refreshRoom.dialogue.comment_deferred.resolve();
+		}
+
+		function motion_callback(index, motion) {
+			var motion_end = refreshRoom.dialogue.walking == 0;
+			if(motion.indexOf("in_walk") > -1) {
+				if(refreshRoom.dialogue.walking) {
+					if(--refreshRoom.dialogue.walking > 0) {
+						motion_end = false;
+					} else {
+						motion_end = true;
+					}
+				}
+			}
+			var filtered_plate = $('.plate-area[rel=' + index + ']');
+			if(filtered_plate.css('display') == 'none') filtered_plate.show();
+			if(motion_end) {
+				if(refreshRoom.dialogue.motion_wait) {
+					$('#next').trigger('click');
+				}
+				refreshRoom.dialogue.motion_wait = false;
+			}
+		}
+	</script>
+	<style>
+	</style>
+</body>
+
+</html>
