@@ -58,3 +58,4 @@
 |53|[ふたりの欲張りプラン](https://l4disk.github.io/refresh_room/detail/53/)|미번역|
 |54|[マキノ・レポート 幸運パワーの正体とは？](https://l4disk.github.io/refresh_room/detail/54/)|미번역|
 |55|[猫チャンガールはお魚ガールの夢を見ない？](https://l4disk.github.io/refresh_room/detail/55/)|미번역|
+|82|[뭐라 해도 여고생♪](https://l4disk.github.io/refresh_room/detail/82/)|완료|
