@@ -9,17 +9,17 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobage: footer-color" content="none">
-	<link rel="stylesheet" href='../../../12008305/css/game/pex.css' media="all">
-	<script src='../../../12008305/js/jquery-2.2.2.min.js'></script>
-	<script src='../../../12008305/js/ilibrary.js'></script>
-	<script src='../../../12008305/js/pex-petit-1.2.0.js'></script>
-	<script src='../../../12008305/js/pex_common.js'></script>
-	<script src='../../../12008305/js/min/petit_manager.min.js'></script>
-	<script src='../../../12008305/js/min/refresh_room.min.js'></script>
+	<link rel="stylesheet" href='../../12008305/css/game/pex.css' media="all">
+	<script src='../../12008305/js/jquery-2.2.2.min.js'></script>
+	<script src='../../12008305/js/ilibrary.js'></script>
+	<script src='../../12008305/js/pex-petit-1.2.0.js'></script>
+	<script src='../../12008305/js/pex_common.js'></script>
+	<script src='../../12008305/js/min/petit_manager.min.js'></script>
+	<script src='../../12008305/js/min/refresh_room.min.js'></script>
 	<title>리프레쉬룸 테스트 페이지</title>
-	<link rel="stylesheet" type="text/css" href="../../../12008305/css/rich/refresh_room.css" media="all">
-	<script type='text/javascript' src='../../../12008305/js/app_sound.js'></script>
-	<link rel="stylesheet" type="text/css" href="../../../css/base.css?20171116" />
+	<link rel="stylesheet" type="text/css" href="../../12008305/css/rich/refresh_room.css" media="all">
+	<script type='text/javascript' src='../../12008305/js/app_sound.js'></script>
+	<link rel="stylesheet" type="text/css" href="../../css/base.css?20171116" />
 </head>
 
 <body>
@@ -27,8 +27,8 @@
 		<section id="pageContainer" class="m-Btm0">
 			<div id="bg_space" class="large-size"></div>
 			<div id="jsEyeCatch">
-				<div style="margin-top:120px"><img src='../../../12008305/image_sp/petit_cg/ui/sprite/loading/working_1.gif' width="195" height="139"></div>
-				<div style="margin-top:-80px"><img src='../../../12008305/image_sp/petit_cg/ui/sprite/loading/loading.gif' width="102" height="102"></div>
+				<div style="margin-top:120px"><img src='../../12008305/image_sp/petit_cg/ui/sprite/loading/working_1.gif' width="195" height="139"></div>
+				<div style="margin-top:-80px"><img src='../../12008305/image_sp/petit_cg/ui/sprite/loading/loading.gif' width="102" height="102"></div>
 			</div>
 			<div class="effect-container large-size">
 				<div id="animation-container"></div>
@@ -63,8 +63,8 @@
 			refreshRoom.is_pc = in_chrome || (window.chrome ? true : false) && (window.chrome.webstore) || ua.indexOf('ChromeApp') > -1 || ua.indexOf('AAWebview') > -1;
 			refreshRoom.old_os = ua.match(/(OS [3-7]|Android [2-4])/);
 			refreshRoom.is_multiply = false;
-			refreshRoom.returnUrl = './3.html';
-			refreshRoom.dialogueSwf = '../../../petit_refresh_room_balloon_swf';
+			refreshRoom.returnUrl = '3.html';
+			refreshRoom.dialogueSwf = '../../petit_refresh_room_balloon_swf';
 			refreshRoom.data = {
 				"id": "test",
 				"refresh_room_id": "test",
@@ -101,8 +101,8 @@
 						"short_name": "クラリス",
 						"image_url_list": {
 							"expression_1085": "2.js",
-							"hair_19085": "../../../12008305/js/petit_cg/hair/19085.js",
-							"costume_1_20085": "../../../12008305/js/petit_cg/costume/1/20085.js"
+							"hair_19085": "../../12008305/js/petit_cg/hair/19085.js",
+							"costume_1_20085": "../../12008305/js/petit_cg/costume/1/20085.js"
 						},
 						"sub_type_list": {
 							"head": null,
@@ -117,7 +117,7 @@
 					}
 				}
 			};
-			var default_swf = '../../../petit_refresh_room_character_swf';
+			var default_swf = '../../petit_refresh_room_character_swf';
 			for (var i in refreshRoom.data.idol_avatar) {
 				refreshRoom.data.idol_avatar[i].swf = default_swf;
 			}
@@ -167,9 +167,9 @@
 			};
 			petitManager.setWidth(refreshRoom.dialogue.scaleSizeCheck(refreshRoom.is_pc));
 			refreshRoom.bg_list = {
-				"0": "../../../12008305/image_sp/ui/refresh_room/bg/bg0.jpg",
-				"1": "../../../12008305/image_sp/ui/refresh_room/bg/bg1.jpg",
-				"": "../../../12008305/image_sp/ui/refresh_room/bg/bg.jpg"
+				"0": "../../12008305/image_sp/ui/refresh_room/bg/bg0.jpg",
+				"1": "../../12008305/image_sp/ui/refresh_room/bg/bg1.jpg",
+				"": "../../12008305/image_sp/ui/refresh_room/bg/bg.jpg"
 			};
 			var image = new Image;
 			var multiply = refreshRoom.is_pc || window.devicePixelRatio >= 1.5 && !refreshRoom.old_os ? 0.5 : 1;
