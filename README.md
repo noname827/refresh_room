@@ -61,4 +61,4 @@
 |68|[귀엽게, 귀여움회의♪](https://l4disk.github.io/refresh_room/detail/68/)|완료|
 |76|[가련한 천사들의 대화 ~리틀 엔젤스-](https://l4disk.github.io/refresh_room/detail/76/)|완료|
 |82|[뭐라 해도 여고생♪](https://l4disk.github.io/refresh_room/detail/82/)|완료|
-|94|[asdasd](https://noname827.github.io/refresh_room/detail/94/)
+|94|[asdasd](https://noname827.github.io/refresh_room/detail/94/asdasd.html)
